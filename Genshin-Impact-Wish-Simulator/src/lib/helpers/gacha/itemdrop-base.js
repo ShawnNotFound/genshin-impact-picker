@@ -49,13 +49,12 @@ const getAllWeapons = (star) => {
 		});
 };
 
-export const getMemberItem = (star) => {
+export const getMemberItem = () => {
 	return memberDB
- .filter(({ rarity }) => rarity === star)
 		.map((arr) => {
 			arr.type = 'member';
 			arr.weaponType = "catalyst";
-			// arr.rarity = 3;
+			arr.rarity = 5;
 			return arr;
 		}); 
 }
