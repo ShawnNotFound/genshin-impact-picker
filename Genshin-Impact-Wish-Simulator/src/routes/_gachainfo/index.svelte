@@ -12,7 +12,6 @@
 	import Book from './_book-bg.svelte';
 	import Details from './details/Details.svelte';
 	import History from './history/History.svelte';
- import { loadMembers } from '$lib/helpers/member-loader';
 
 	export let page = '';
 
@@ -24,8 +23,6 @@
 		playSfx('close');
 	};
 	setContext('close-detail', handleCLose);
-
-loadMembers('$lib/namelist.txt');
 
 	let tplVersion = cookie.get('detail-tpl') || 'v2';
 	const setTpl = (v) => {
